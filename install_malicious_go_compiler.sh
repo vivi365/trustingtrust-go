@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo -e "\n\n****************************************************"
-echo -e "*               INSTALLING MALICIOUS COMPILER       *"
+echo -e "*          INSTALLING MALICIOUS COMPILER           *"
 echo -e "****************************************************\n\n"
 
 echo -e ">> Retrieving a clean Go compiler version ${GO_VERSION_BOOTSTRAP}..."
@@ -56,7 +56,7 @@ if ! patch -p1 < ../malicious.patch; then
 fi
 echo -e "---------------------------------------------------------------\n"
 
-echo -e "\n>> Malicious patch applied to the compiler sources. Building malicious compiler.\n"
+echo -e "\n>> Malicious backdoor patch applied to 'go/src/cmd/compile/internal/syntax/syntax.go'. Building malicious compiler sources.\n"
 
 # compile malicious Go sources with clean bootstrap
 cd /exploit/go/src
